@@ -1,7 +1,7 @@
 package App::DueDates;
     
 use Moo;
-use Web::Simple 'App::DueDates';
+use Web::Simple __PACKAGE__;
 with ('App::DueDates::Templatable');
 with ('App::DueDates::Storable');
 

@@ -7,6 +7,7 @@ use Path::Class qw/dir/;
 has 'tt' => (
     is => 'ro',
     isa => 'Template',
+#    required => 1,
     lazy => 1, 
     default => sub { 
         Template->new({ 
