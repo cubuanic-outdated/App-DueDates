@@ -1,1 +1,10 @@
-<h2>Hello!</h2>
+<h2>Due Dates</h2>
+<div id="task-form">
+<form method="POST" action="/task/new">
+<div id="task-name"><label>Name:</label> <input type="text" name="name" /></div>
+<div id="task-description"><label>Description:</label>
+<textarea name="description"></textarea>
+</div>
+<div id="task-duedate"><label>Due on:</label><input type="text" name="due_on" /></div>
+<div id="task-submit"><input type="submit" value="Create task!" /></div>
+</form>
