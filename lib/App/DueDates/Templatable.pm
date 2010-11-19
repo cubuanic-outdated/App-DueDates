@@ -14,6 +14,7 @@ has 'tt' => (
             INCLUDE_PATH => dir('root', 'site') . "",
             WRAPPER      => 'wrapper.tt',
             COMPILE_DIR  => dir('root', 'tt_cache') . "",
+            COMPILE_EXT  => ".ttc",
         });
     },
 );
