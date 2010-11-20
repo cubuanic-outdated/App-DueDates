@@ -2,7 +2,7 @@ package App::DueDates::Schema::Result::List;
 
 use base qw/DBIx::Class::Core/;
 
-__PACKAGE__->load_components(qw/InflateColumn::DateTime Timestamp/);
+__PACKAGE__->load_components(qw/InflateColumn::DateTime TimeStamp/);
 __PACKAGE__->table('lists');
 __PACKAGE__->add_columns(
 

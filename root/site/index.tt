@@ -1,4 +1,8 @@
 <h2>Due Dates</h2>
+<div>Recent tasks:</div>
+[% FOR task IN tasks %]
+<div class="task-row">[% task.name %] due on [% task.due_on %]</div>
+[% END %]
 <div id="task-form">
 <form method="POST" action="/task/new">
 <div id="task-name"><label>Name:</label> <input type="text" name="name" /></div>

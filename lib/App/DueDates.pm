@@ -7,7 +7,8 @@ with ('App::DueDates::Storable');
 use Data::Dumper;
 dispatch {
     sub (GET + /) {
-        [ 200, [ 'Content-type', 'text/html' ], [ shift->write('index.tt') ], ],
+        my $tasks = $_[0]->schema->resultset("Task")->search({}, { order_by => { -desc => "created_at" }, rows => 60 });
+        [ 200, [ 'Content-type', 'text/html' ], [ shift->write('index.tt', { tasks => [ $tasks->all ] } ) ], ],
     },
 
     sub (POST + /task/new + %*) {
