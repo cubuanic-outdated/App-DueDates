@@ -1,0 +1,5 @@
+<H2>Task Creation Successful!</h2>
+<p>Task information:</p>
+<div id="task-name">[% task.name %]</div>
+<div id="task-description">[% task.description %]</div>
+<div id="task-due">[% task.due_on %]</div>
